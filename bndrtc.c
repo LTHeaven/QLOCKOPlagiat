@@ -41,11 +41,11 @@ uint32_t completeDisplay;
 #define PIN_EUN 	(1UL<<23)
 #define PIN_UHR 	(1UL<<24)
 
-#define pin_ELF 	(pin_el | pin_f)
-#define pin_FUENF_2 (pin_f | pin_uenf)
-#define pin_EINS 	(pin_ein | pin_s)
-#define pin_ZEHN_2 	(pin_zeh | pin_n)
-#define pin_NEUN 	(pin_n | pin_eun)
+#define PIN_ELF 	(PIN_EL | PIN_F)
+#define PIN_FUENF_2 (PIN_F | PIN_UENF)
+#define PIN_EINS 	(PIN_EIN | PIN_S)
+#define PIN_ZEHN_2 	(PIN_ZEH | PIN_N)
+#define PIN_NEUN 	(PIN_N | PIN_EUN)
  
 void updateDisplayBufForTime();
 
@@ -320,7 +320,7 @@ void updateDisplayBufForTime()
       } else if(minutes <10) {
         completeDisplay |= PIN_FUENF_1 | PIN_NACH;
       } else if(minutes <15) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_ZEHN_1 | PIN_NACH;
       } else if(minutes <20) {
         completeDisplay |= ;
       } else if(minutes <25) {
