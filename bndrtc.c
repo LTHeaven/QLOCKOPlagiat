@@ -298,6 +298,7 @@ ISR(TIM0_OVF_vect)
 	}	  
            
     } 
+    rtcReadRegs(RTC_REG_SEC, rtcTimeBuffer, 3);
   }
   dcfPhase++;  
 }
@@ -309,86 +310,98 @@ void incrementHour(uint8_t * hour)
     *hour = 0;
   }
 }
-void updateDisplayBufForTime() 
-{
-  completeDisplay = 0;
-  uint8_t hour = (dcfHr % 16) + ((dcfHr / 16 )* 10);
-  uint8_t minutes = (dcfMin % 16) + ((dcfMin / 16 )* 10);
-  if(dcfStat == DCF_STAT_SUCCESS)
-  {   
-      uint8_t displayHour = hour;
-      completeDisplay = PIN_ES_IST;
-      if(minutes < 5) {
-        completeDisplay |= PIN_UHR;
-      } else if(minutes <10) {
-        completeDisplay |= PIN_FUENF_1 | PIN_NACH;
-      } else if(minutes <15) {
-        completeDisplay |= PIN_ZEHN_1 | PIN_NACH;
-      } else if(minutes <20) {
-        completeDisplay |= PIN_VIERTEL | PIN_NACH;
-      } else if(minutes <25) {
-        completeDisplay |= PIN_ZWANZIG | PIN_NACH;
-      } else if(minutes <30) {
-        completeDisplay |= PIN_FUENF_1 | PIN_VOR | PIN_HALB;
-        incrementHour(&displayHour);
-      } else if(minutes <35) {
-        completeDisplay |= PIN_HALB;
-        incrementHour(&displayHour);
-      } else if(minutes <40) {
-        completeDisplay |= PIN_FUENF_1 | PIN_NACH | PIN_HALB;
-        incrementHour(&displayHour);
-      } else if(minutes <45) {
-        completeDisplay |= PIN_ZWANZIG |PIN_VOR;
-        incrementHour(&displayHour);
-      } else if(minutes <50) {
-        completeDisplay |= PIN_VIERTEL | PIN_VOR;
-        incrementHour(&displayHour);
-      } else if(minutes <55) {
-        completeDisplay |= PIN_ZEHN_1 | PIN_VOR;
-        incrementHour(&displayHour);
-      } else if(minutes <60) {
-        completeDisplay |= PIN_FUENF_1 | PIN_VOR;
-        incrementHour(&displayHour);
-      } 
-      
-      if (hour == 0 || hour == 12){
-        completeDisplay |= PIN_ZWOELF ;
-      } else if(hour == 1 || hour == 13){
-        if (minutes <= 5) {
-          completeDisplay |= PIN_EIN;
-        } else {
-          completeDisplay |= PIN_EINS;
-        }
-      } else if(hour == 2 || hour == 14){
-        completeDisplay |= PIN_ZWEI;
-      } else if(hour == 3 || hour == 15){
-        completeDisplay |= PIN_DREI;
-      } else if(hour == 4 || hour == 16){
-        completeDisplay |= PIN_VIER;
-      } else if(hour == 5 || hour == 17){
-        completeDisplay |= PIN_FUENF_2;
-      } else if(hour == 6 || hour == 18){
-        completeDisplay |= PIN_SECHS;
-      } else if(hour == 7 || hour == 19){
-        completeDisplay |= PIN_SIEBEN;
-      } else if(hour == 8 || hour == 20){
-        completeDisplay |= PIN_ACHT;
-      } else if(hour == 9 || hour == 21){
-        completeDisplay |= PIN_NEUN;
-      } else if(hour == 10 || hour == 22){
-        completeDisplay |= PIN_ZEHN_2;
-      } else if(hour == 11 || hour == 23){
-        completeDisplay |= PIN_ELF;
-      }        
-  } 
-  else
-  {
-    completeDisplay |= PIN_FUNK;
-  }
+
+void updateDisplayBuffers() {
   displayBuf[0] = (uint8_t) completeDisplay;
   displayBuf[1] = (uint8_t) (completeDisplay>>8);
   displayBuf[2] = (uint8_t) (completeDisplay>>16);
-  displayBuf[3] =  dcfStat;//(uint8_t) (completeDisplay>>24);
+  displayBuf[3] = (uint8_t) (completeDisplay>>24);
+}
+
+void updateDisplayBufForTime() 
+{
+  completeDisplay = 0;
+  
+  if(dcfStat != DCF_STAT_SUCCESS) {
+    if (dcfStat >= DCF_STAT_WAIT_FOR_SYNC) {
+      completeDisplay |= PIN_FUNK;
+    }else{
+      if(dcfPhase & 0x20){
+        completeDisplay |= PIN_FUNK;
+      }
+    }
+  }
+  
+  if(!rtcTimeBuffer[0] & 0x80 ) {
+    uint8_t hour = (rtcTimeBuffer[2] % 16) + ((rtcTimeBuffer[2] / 16 )* 10);
+    uint8_t minutes = (rtcTimeBuffer[1] % 16) + ((rtcTimeBuffer[1] / 16 )* 10);
+
+    uint8_t displayHour = hour;
+    completeDisplay = PIN_ES_IST;
+    if(minutes < 5) {
+      completeDisplay |= PIN_UHR;
+    } else if(minutes <10) {
+      completeDisplay |= PIN_FUENF_1 | PIN_NACH;
+    } else if(minutes <15) {
+      completeDisplay |= PIN_ZEHN_1 | PIN_NACH;
+    } else if(minutes <20) {
+      completeDisplay |= PIN_VIERTEL | PIN_NACH;
+    } else if(minutes <25) {
+      completeDisplay |= PIN_ZWANZIG | PIN_NACH;
+    } else if(minutes <30) {
+      completeDisplay |= PIN_FUENF_1 | PIN_VOR | PIN_HALB;
+      incrementHour(&displayHour);
+    } else if(minutes <35) {
+      completeDisplay |= PIN_HALB;
+      incrementHour(&displayHour);
+    } else if(minutes <40) {
+      completeDisplay |= PIN_FUENF_1 | PIN_NACH | PIN_HALB;
+      incrementHour(&displayHour);
+    } else if(minutes <45) {
+      completeDisplay |= PIN_ZWANZIG |PIN_VOR;
+      incrementHour(&displayHour);
+    } else if(minutes <50) {
+      completeDisplay |= PIN_VIERTEL | PIN_VOR;
+      incrementHour(&displayHour);
+    } else if(minutes <55) {
+      completeDisplay |= PIN_ZEHN_1 | PIN_VOR;
+      incrementHour(&displayHour);
+    } else if(minutes <60) {
+      completeDisplay |= PIN_FUENF_1 | PIN_VOR;
+      incrementHour(&displayHour);
+    } 
+    
+    if (displayHour == 0 || displayHour == 12){
+      completeDisplay |= PIN_ZWOELF ;
+    } else if(displayHour == 1 || displayHour == 13){
+      if (minutes <= 5) {
+        completeDisplay |= PIN_EIN;
+      } else {
+        completeDisplay |= PIN_EINS;
+      }
+    } else if(displayHour == 2 || displayHour == 14){
+      completeDisplay |= PIN_ZWEI;
+    } else if(displayHour == 3 || displayHour == 15){
+      completeDisplay |= PIN_DREI;
+    } else if(displayHour == 4 || displayHour == 16){
+      completeDisplay |= PIN_VIER;
+    } else if(displayHour == 5 || displayHour == 17){
+      completeDisplay |= PIN_FUENF_2;
+    } else if(displayHour == 6 || displayHour == 18){
+      completeDisplay |= PIN_SECHS;
+    } else if(displayHour == 7 || displayHour == 19){
+      completeDisplay |= PIN_SIEBEN;
+    } else if(displayHour == 8 || displayHour == 20){
+      completeDisplay |= PIN_ACHT;
+    } else if(displayHour == 9 || displayHour == 21){
+      completeDisplay |= PIN_NEUN;
+    } else if(displayHour == 10 || displayHour == 22){
+      completeDisplay |= PIN_ZEHN_2;
+    } else if(displayHour == 11 || displayHour == 23){
+      completeDisplay |= PIN_ELF;
+    }
+  }
+  updateDisplayBuffers();
 } 
 
 int main(void)
