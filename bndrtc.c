@@ -299,7 +299,7 @@ ISR(TIM0_OVF_vect)
     } 
     rtcReadRegs(RTC_REG_SEC, rtcTimeBuffer, 3);
     //daily time sync
-    if(dcfStat == DCF_STAT_SUCCESS && rtcTimeBuffer[1] == 0 && rtcTimeBuffer[2] == 1){
+    if(dcfStat == DCF_STAT_SUCCESS && rtcTimeBuffer[1] == 0 && rtcTimeBuffer[2] == 3){
       resetDCF();
     }
   }
