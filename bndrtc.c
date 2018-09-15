@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
+#include <util/parity.h>
 
 uint8_t spiBuf;
 uint8_t displayBuf[4];
@@ -233,8 +234,29 @@ void updateDCF()
 	    {
 	      dcfMin >>= 1;
 	      if (dcfBit)
-		dcfMin |= 0x80;
+          dcfMin |= 0x80;
+        if(dcfCounter == 28){
+          if (parity_even_bit(dcfMin)) {
+            resetDCF();
+            return;
+          }
+          dcfMin &= 0x7f;
+        }
 	    }	  
+      if (dcfCounter > 28 && dcfCounter < 36)
+	    {
+	      dcfHour >>= 1;
+	      if (dcfBit)
+          dcfHour |= 0x80;
+        if(dcfCounter == 35){
+          dcfHour >>= 1;
+          if (parity_even_bit(dcfHour)) {
+            resetDCF();
+            return;
+          }
+          dcfHour &= 0x3f;
+        }
+	    }
 	}
       else if( dcfCounter == 0 && dcfBit)
 	{
