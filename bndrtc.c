@@ -29,7 +29,7 @@ uint32_t completeDisplay;
 #define PIN_UENF 	(1UL<<11)
 #define PIN_EIN 	(1UL<<12)
 #define PIN_S 		(1UL<<13)
-#define PIN_ZEWI 	(1UL<<14)
+#define PIN_ZWEI 	(1UL<<14)
 #define PIN_DREI 	(1UL<<15)
 #define PIN_VIER 	(1UL<<16)
 #define PIN_SECHS 	(1UL<<17)
@@ -304,43 +304,84 @@ ISR(TIM0_OVF_vect)
   dcfPhase++;  
 }
 
+void incrementHour(uint8_t * hour) 
+{
+  *hour += 1;
+  if(*hour > 23) {
+    *hour = 0;
+  }
+}
 void updateDisplayBufForTime() 
 {
   completeDisplay = 0;
   uint8_t hour = (dcfHr % 16) + ((dcfHr / 16 )* 10);
   uint8_t minutes = (dcfMin % 16) + ((dcfMin / 16 )* 10);
   if(dcfStat == DCF_STAT_SUCCESS)
-  {
-      //placeholder
-      
-      
-      completeDisplay	= PIN_ES_IST;
-      if(minutes <= 5) {
+  {   
+      uint8_t displayHour = hour;
+      completeDisplay = PIN_ES_IST;
+      if(minutes < 5) {
         completeDisplay |= PIN_UHR;
       } else if(minutes <10) {
         completeDisplay |= PIN_FUENF_1 | PIN_NACH;
       } else if(minutes <15) {
         completeDisplay |= PIN_ZEHN_1 | PIN_NACH;
       } else if(minutes <20) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_VIERTEL | PIN_NACH;
       } else if(minutes <25) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_ZWANZIG | PIN_NACH;
       } else if(minutes <30) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_FUENF_1 | PIN_VOR | PIN_HALB;
+        incrementHour(&displayHour);
       } else if(minutes <35) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_HALB;
+        incrementHour(&displayHour);
       } else if(minutes <40) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_FUENF_1 | PIN_NACH | PIN_HALB;
+        incrementHour(&displayHour);
       } else if(minutes <45) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_ZWANZIG |PIN_VOR;
+        incrementHour(&displayHour);
       } else if(minutes <50) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_VIERTEL | PIN_VOR;
+        incrementHour(&displayHour);
       } else if(minutes <55) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_ZEHN_1 | PIN_VOR;
+        incrementHour(&displayHour);
       } else if(minutes <60) {
-        completeDisplay |= ;
+        completeDisplay |= PIN_FUENF_1 | PIN_VOR;
+        incrementHour(&displayHour);
       } 
       
+      if (hour == 0 || hour == 12){
+        completeDisplay |= PIN_ZWOELF ;
+      } else if(hour == 1 || hour == 13){
+        if (minutes <= 5) {
+          completeDisplay |= PIN_EIN;
+        } else {
+          completeDisplay |= PIN_EINS;
+        }
+      } else if(hour == 2 || hour == 14){
+        completeDisplay |= PIN_ZWEI;
+      } else if(hour == 3 || hour == 15){
+        completeDisplay |= PIN_DREI;
+      } else if(hour == 4 || hour == 16){
+        completeDisplay |= PIN_VIER;
+      } else if(hour == 5 || hour == 17){
+        completeDisplay |= PIN_FUENF_2;
+      } else if(hour == 6 || hour == 18){
+        completeDisplay |= PIN_SECHS;
+      } else if(hour == 7 || hour == 19){
+        completeDisplay |= PIN_SIEBEN;
+      } else if(hour == 8 || hour == 20){
+        completeDisplay |= PIN_ACHT;
+      } else if(hour == 9 || hour == 21){
+        completeDisplay |= PIN_NEUN;
+      } else if(hour == 10 || hour == 22){
+        completeDisplay |= PIN_ZEHN_2;
+      } else if(hour == 11 || hour == 23){
+        completeDisplay |= PIN_ELF;
+      }        
   } 
   else
   {
