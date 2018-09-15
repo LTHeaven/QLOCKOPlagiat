@@ -212,10 +212,10 @@ void updateDCF()
 	      if (dcfBit)
           dcfMin |= 0x80;
         if(dcfCounter == 28){
-          //if (parity_even_bit(dcfMin)) {
-          //  resetDCF();
-          //  return;
-          //}
+          if (parity_even_bit(dcfMin)) {
+            resetDCF();
+            return;
+          }
           dcfMin &= 0x7f;
         }
 	    }	  
@@ -226,10 +226,10 @@ void updateDCF()
           dcfHr |= 0x80;
         if(dcfCounter == 35){
           dcfHr >>= 1;
-          //if (parity_even_bit(dcfHr)) {
-          //  resetDCF();
-          //  return;
-          //}
+          if (parity_even_bit(dcfHr)) {
+            resetDCF();
+            return;
+          }
           dcfHr &= 0x3f;
         }
 	    }
