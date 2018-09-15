@@ -181,11 +181,11 @@ void updateDCF()
 	  dcfCounter--;
       return;
     case DCF_STAT_RECEIVING:
-      if (dcfCounter == 58)
+      if (dcfCounter == 59)
 	{
 	  dcfStat = DCF_STAT_SUCCESS;
     //write time to RTC
-    rtcTimeBuffer[0] = 0x59;
+    rtcTimeBuffer[0] = 0x00;
     rtcTimeBuffer[1] = dcfMin;
     rtcTimeBuffer[2] = dcfHr;
     rtcWriteRegs(RTC_REG_SEC, rtcTimeBuffer,3);
@@ -299,7 +299,7 @@ ISR(TIM0_OVF_vect)
     } 
     rtcReadRegs(RTC_REG_SEC, rtcTimeBuffer, 3);
     //daily time sync
-    if(dcfStat == DCF_STAT_SUCCESS && rtcTimeBuffer[1] == 0x30 && rtcTimeBuffer[2] == 0){
+    if(dcfStat == DCF_STAT_SUCCESS && rtcTimeBuffer[1] == 0 && rtcTimeBuffer[2] == 1){
       resetDCF();
     }
   }
