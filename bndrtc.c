@@ -315,6 +315,31 @@ void updateDisplayBufForTime()
       
       
       completeDisplay	= PIN_ES_IST;
+      if(minutes <= 5) {
+        completeDisplay |= PIN_UHR;
+      } else if(minutes <10) {
+        completeDisplay |= PIN_FUENF_1 | PIN_NACH;
+      } else if(minutes <15) {
+        completeDisplay |= ;
+      } else if(minutes <20) {
+        completeDisplay |= ;
+      } else if(minutes <25) {
+        completeDisplay |= ;
+      } else if(minutes <30) {
+        completeDisplay |= ;
+      } else if(minutes <35) {
+        completeDisplay |= ;
+      } else if(minutes <40) {
+        completeDisplay |= ;
+      } else if(minutes <45) {
+        completeDisplay |= ;
+      } else if(minutes <50) {
+        completeDisplay |= ;
+      } else if(minutes <55) {
+        completeDisplay |= ;
+      } else if(minutes <60) {
+        completeDisplay |= ;
+      } 
       
   } 
   else
