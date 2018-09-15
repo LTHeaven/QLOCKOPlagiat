@@ -13,40 +13,10 @@ uint8_t dcfPhase;
 uint16_t dcfBuffer;
 uint8_t dcfMin;
 uint8_t dcfHr;
+uint8_t rtcTimeBuffer[3]; 
 
 uint32_t completeDisplay;
 
-#define PIN_ES_IST 	(1UL<<0)
-#define PIN_FUENF_1 (1UL<<1)
-#define PIN_ZEHN_1 	(1UL<<2)
-#define PIN_ZWANZIG (1UL<<3)
-#define PIN_VIERTEL (1UL<<4)
-#define PIN_VOR 	(1UL<<5)
-#define PIN_FUNK 	(1UL<<6)
-#define PIN_NACH 	(1UL<<7)
-#define PIN_HALB 	(1UL<<8)
-#define PIN_EL 		(1UL<<9)
-#define PIN_F 		(1UL<<10)
-#define PIN_UENF 	(1UL<<11)
-#define PIN_EIN 	(1UL<<12)
-#define PIN_S 		(1UL<<13)
-#define PIN_ZWEI 	(1UL<<14)
-#define PIN_DREI 	(1UL<<15)
-#define PIN_VIER 	(1UL<<16)
-#define PIN_SECHS 	(1UL<<17)
-#define PIN_ACHT 	(1UL<<18)
-#define PIN_SIEBEN 	(1UL<<19)
-#define PIN_ZWOELF 	(1UL<<20)
-#define PIN_ZEH 	(1UL<<21)
-#define PIN_N 		(1UL<<22)
-#define PIN_EUN 	(1UL<<23)
-#define PIN_UHR 	(1UL<<24)
-
-#define PIN_ELF 	(PIN_EL | PIN_F)
-#define PIN_FUENF_2 (PIN_F | PIN_UENF)
-#define PIN_EINS 	(PIN_EIN | PIN_S)
-#define PIN_ZEHN_2 	(PIN_ZEH | PIN_N)
-#define PIN_NEUN 	(PIN_N | PIN_EUN)
  
 void updateDisplayBufForTime();
 
@@ -162,7 +132,8 @@ void initRTC(void)
   rtcWriteRegs(RTC_REG_CKO, &spiBuf, 1);
   spiBuf = 0b00100001;
   rtcWriteRegs(RTC_REG_CKO, &spiBuf, 1);
-  _delay_ms(120);  
+  _delay_ms(120);
+  rtcReadRegs(RTC_REG_SEC, rtcTimeBuffer, 3);
 }
 
 // Set PWM rate depnding on brighntess measurement
@@ -236,10 +207,10 @@ void updateDCF()
 	      if (dcfBit)
           dcfMin |= 0x80;
         if(dcfCounter == 28){
-          if (parity_even_bit(dcfMin)) {
-            resetDCF();
-            return;
-          }
+          //if (parity_even_bit(dcfMin)) {
+          //  resetDCF();
+          //  return;
+          //}
           dcfMin &= 0x7f;
         }
 	    }	  
@@ -250,10 +221,10 @@ void updateDCF()
           dcfHr |= 0x80;
         if(dcfCounter == 35){
           dcfHr >>= 1;
-          if (parity_even_bit(dcfHr)) {
-            resetDCF();
-            return;
-          }
+          //if (parity_even_bit(dcfHr)) {
+          //  resetDCF();
+          //  return;
+          //}
           dcfHr &= 0x3f;
         }
 	    }
