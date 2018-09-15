@@ -337,7 +337,7 @@ void updateDisplayBufForTime()
     uint8_t minutes = (rtcTimeBuffer[1] % 16) + ((rtcTimeBuffer[1] / 16 )* 10);
 
     uint8_t displayHour = hour;
-    completeDisplay = PIN_ES_IST;
+    completeDisplay |= PIN_ES_IST;
     if(minutes < 5) {
       completeDisplay |= PIN_UHR;
     } else if(minutes <10) {
