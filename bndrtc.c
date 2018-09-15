@@ -332,7 +332,7 @@ void updateDisplayBufForTime()
     }
   }
   
-  if(!rtcTimeBuffer[0] & 0x80 ) {
+  if(!(rtcTimeBuffer[0] & 0x80)) {
     uint8_t hour = (rtcTimeBuffer[2] % 16) + ((rtcTimeBuffer[2] / 16 )* 10);
     uint8_t minutes = (rtcTimeBuffer[1] % 16) + ((rtcTimeBuffer[1] / 16 )* 10);
 
