@@ -389,8 +389,8 @@ void updateDisplayBufForTime()
   }
   displayBuf[0] = (uint8_t) completeDisplay;
   displayBuf[1] = (uint8_t) (completeDisplay>>8);
-  displayBuf[2] = hour;//(uint8_t) (completeDisplay>>16);
-  displayBuf[3] = minutes;//(uint8_t) (completeDisplay>>24);
+  displayBuf[2] = (uint8_t) (completeDisplay>>16);
+  displayBuf[3] = (uint8_t) (completeDisplay>>24);
 } 
 
 int main(void)
