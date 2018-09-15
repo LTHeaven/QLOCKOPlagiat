@@ -184,10 +184,15 @@ void updateDCF()
       if (dcfCounter == 58)
 	{
 	  dcfStat = DCF_STAT_SUCCESS;
+    //write time to RTC
+    rtcTimeBuffer[0] = 0x59;
+    rtcTimeBuffer[1] = dcfMin;
+    rtcTimeBuffer[2] = dcfHr;
+    rtcWriteRegs(RTC_REG_SEC, rtcTimeBuffer,3);
 	  return;
 	}
-      
-      if ((dcfBuffer & 0xFFF0) != 0 || (dcfBuffer & 3) != 3)
+  
+  if ((dcfBuffer & 0xFFF0) != 0 || (dcfBuffer & 3) != 3)
 	{
 	  resetDCF();
 	  return;
@@ -383,7 +388,7 @@ void updateDisplayBufForTime()
   displayBuf[0] = (uint8_t) completeDisplay;
   displayBuf[1] = (uint8_t) (completeDisplay>>8);
   displayBuf[2] = (uint8_t) (completeDisplay>>16);
-  displayBuf[3] = (uint8_t) (completeDisplay>>24);
+  displayBuf[3] =  dcfStat;//(uint8_t) (completeDisplay>>24);
 } 
 
 int main(void)
