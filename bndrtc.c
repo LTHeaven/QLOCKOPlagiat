@@ -253,9 +253,8 @@ ISR(TIM0_OVF_vect)
   updateDisplayBufForTime();
   updateDisplay();
   //rtcReadRegs(RTC_REG_SEC, displayBuf, 2); // Fetch time from RTC
-  if (ADCSRA | _BV(ADIF))
+  if (ADCSRA & _BV(ADIF))
     updatePWMRate(ADCH);
-
 
   if ((dcfPhase & 0x03) == 0)
   {
@@ -299,6 +298,10 @@ ISR(TIM0_OVF_vect)
            
     } 
     rtcReadRegs(RTC_REG_SEC, rtcTimeBuffer, 3);
+    //daily time sync
+    if(dcfStat == DCF_STAT_SUCCESS && rtcTimeBuffer[1] == 0x30 && rtcTimeBuffer[2] == 0){
+      resetDCF();
+    }
   }
   dcfPhase++;  
 }
