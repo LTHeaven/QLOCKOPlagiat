@@ -245,16 +245,16 @@ void updateDCF()
 	    }	  
       if (dcfCounter > 28 && dcfCounter < 36)
 	    {
-	      dcfHour >>= 1;
+	      dcfHr >>= 1;
 	      if (dcfBit)
-          dcfHour |= 0x80;
+          dcfHr |= 0x80;
         if(dcfCounter == 35){
-          dcfHour >>= 1;
-          if (parity_even_bit(dcfHour)) {
+          dcfHr >>= 1;
+          if (parity_even_bit(dcfHr)) {
             resetDCF();
             return;
           }
-          dcfHour &= 0x3f;
+          dcfHr &= 0x3f;
         }
 	    }
 	}
