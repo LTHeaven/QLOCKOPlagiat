@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name BndUhr-rescue)(type Legacy)(uri ${KIPRJMOD}/BndUhr-rescue.lib)(options "")(descr ""))
+  (lib (name RTC)(type Legacy)(uri E:/Documents/KiCadProjects/PartLibs/RTC.lib)(options "")(descr ""))
+  (lib (name uln)(type Legacy)(uri E:/Documents/KiCadProjects/PartLibs/uln.lib)(options "")(descr ""))
+)

@@ -1,0 +1,1666 @@
+EESchema Schematic File Version 4
+LIBS:BndUhr-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BndUhr-rescue:74HC595 U2
+U 1 1 583CE3E1
+P 7050 2500
+F 0 "U2" H 7200 3100 50  0000 C CNN
+F 1 "74HC595" H 7050 1900 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 7050 2500 50  0001 C CNN
+F 3 "" H 7050 2500 50  0000 C CNN
+	1    7050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:74HC595 U3
+U 1 1 583CED58
+P 7100 1200
+F 0 "U3" H 7250 1800 50  0000 C CNN
+F 1 "74HC595" H 7100 600 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 7100 1200 50  0001 C CNN
+F 3 "" H 7100 1200 50  0000 C CNN
+	1    7100 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:74HC595 U4
+U 1 1 583CF1C9
+P 7100 3800
+F 0 "U4" H 7250 4400 50  0000 C CNN
+F 1 "74HC595" H 7100 3200 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 7100 3800 50  0001 C CNN
+F 3 "" H 7100 3800 50  0000 C CNN
+	1    7100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:74HC595 U5
+U 1 1 583CF1D7
+P 7100 5100
+F 0 "U5" H 7250 5700 50  0000 C CNN
+F 1 "74HC595" H 7100 4500 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 7100 5100 50  0001 C CNN
+F 3 "" H 7100 5100 50  0000 C CNN
+	1    7100 5100
+	1    0    0    -1  
+$EndComp
+Text Label 8050 2050 2    60   ~ 0
+LD1
+Text Label 8050 2150 2    60   ~ 0
+LD2
+Text Label 8050 2250 2    60   ~ 0
+LD3
+Text Label 8050 2350 2    60   ~ 0
+LD4
+Text Label 8050 2450 2    60   ~ 0
+LD5
+Text Label 8050 2550 2    60   ~ 0
+LD6
+Text Label 8050 2650 2    60   ~ 0
+LD7
+Text Label 8050 2750 2    60   ~ 0
+LD8
+Text Label 8100 750  2    60   ~ 0
+LD9
+Text Label 8100 850  2    60   ~ 0
+LD10
+Text Label 8100 950  2    60   ~ 0
+LD11
+Text Label 8100 1050 2    60   ~ 0
+LD12
+Text Label 8100 1150 2    60   ~ 0
+LD13
+Text Label 8100 1250 2    60   ~ 0
+LD14
+Text Label 8100 1350 2    60   ~ 0
+LD15
+Text Label 8100 1450 2    60   ~ 0
+LD16
+Text Label 6000 1250 0    60   ~ 0
+RCLK
+Text Label 6100 1350 0    60   ~ 0
+~OE
+Text Label 6100 750  0    60   ~ 0
+DO_MISO
+$Comp
+L BndUhr-rescue:ATTINY84A-SS IC1
+U 1 1 583DC6D4
+P 2350 2950
+F 0 "IC1" H 1500 3700 50  0000 C CNN
+F 1 "ATTINY84A-SS" H 3000 2200 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2350 2750 50  0000 C CIN
+F 3 "" H 2350 2950 50  0000 C CNN
+	1    2350 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR4
+U 1 1 583DD18B
+P 1150 2250
+F 0 "#PWR4" H 1150 2100 50  0001 C CNN
+F 1 "+3.3V" H 1150 2390 50  0000 C CNN
+F 2 "" H 1150 2250 50  0000 C CNN
+F 3 "" H 1150 2250 50  0000 C CNN
+	1    1150 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR5
+U 1 1 583DDC9F
+P 1150 3650
+F 0 "#PWR5" H 1150 3400 50  0001 C CNN
+F 1 "GND" H 1150 3500 50  0000 C CNN
+F 2 "" H 1150 3650 50  0000 C CNN
+F 3 "" H 1150 3650 50  0000 C CNN
+	1    1150 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C3
+U 1 1 583DDE09
+P 1150 2900
+F 0 "C3" H 1175 3000 50  0000 L CNN
+F 1 "100n" H 1175 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1188 2750 50  0001 C CNN
+F 3 "" H 1150 2900 50  0000 C CNN
+	1    1150 2900
+	1    0    0    -1  
+$EndComp
+Text Label 3750 2950 2    60   ~ 0
+DI_MOSI
+Text Label 3750 2850 2    60   ~ 0
+DO_MISO
+Text Label 3750 3550 2    60   ~ 0
+~RESET
+Text Label 3750 2350 2    60   ~ 0
+PHOT
+Text Label 5450 2750 2    60   ~ 0
+SCK
+Text Label 3750 2450 2    60   ~ 0
+BTN1
+Text Label 3750 2550 2    60   ~ 0
+BTN2
+$Comp
+L BndUhr-rescue:GND #PWR19
+U 1 1 583E7B2C
+P 4850 2050
+F 0 "#PWR19" H 4850 1800 50  0001 C CNN
+F 1 "GND" H 4850 1900 50  0000 C CNN
+F 2 "" H 4850 2050 50  0000 C CNN
+F 3 "" H 4850 2050 50  0000 C CNN
+	1    4850 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:R R2
+U 1 1 583EAFFD
+P 3850 1550
+F 0 "R2" V 3930 1550 50  0000 C CNN
+F 1 "10K" V 3850 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3780 1550 50  0001 C CNN
+F 3 "" H 3850 1550 50  0000 C CNN
+	1    3850 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:R R6
+U 1 1 583EB290
+P 4050 1550
+F 0 "R6" V 4130 1550 50  0000 C CNN
+F 1 "10K" V 4050 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3980 1550 50  0001 C CNN
+F 3 "" H 4050 1550 50  0000 C CNN
+	1    4050 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:R R7
+U 1 1 583EB2FA
+P 4250 1550
+F 0 "R7" V 4330 1550 50  0000 C CNN
+F 1 "10K" V 4250 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4180 1550 50  0001 C CNN
+F 3 "" H 4250 1550 50  0000 C CNN
+	1    4250 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR15
+U 1 1 583EB802
+P 4050 1200
+F 0 "#PWR15" H 4050 1050 50  0001 C CNN
+F 1 "+3.3V" H 4050 1340 50  0000 C CNN
+F 2 "" H 4050 1200 50  0000 C CNN
+F 3 "" H 4050 1200 50  0000 C CNN
+	1    4050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:PCF2129AT IC2
+U 1 1 583EC239
+P 2350 4950
+F 0 "IC2" H 1800 4550 60  0000 C CNN
+F 1 "PCF2129AT" H 2350 4950 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2350 4950 60  0001 C CNN
+F 3 "" H 2350 4950 60  0000 C CNN
+	1    2350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR6
+U 1 1 583ECD50
+P 1300 4400
+F 0 "#PWR6" H 1300 4250 50  0001 C CNN
+F 1 "+3.3V" H 1300 4540 50  0000 C CNN
+F 2 "" H 1300 4400 50  0000 C CNN
+F 3 "" H 1300 4400 50  0000 C CNN
+	1    1300 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C1
+U 1 1 583ECDAF
+P 1000 4500
+F 0 "C1" H 1025 4600 50  0000 L CNN
+F 1 "100n" H 1025 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1038 4350 50  0001 C CNN
+F 3 "" H 1000 4500 50  0000 C CNN
+	1    1000 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR2
+U 1 1 583ECE48
+P 650 5400
+F 0 "#PWR2" H 650 5150 50  0001 C CNN
+F 1 "GND" H 650 5250 50  0000 C CNN
+F 2 "" H 650 5400 50  0000 C CNN
+F 3 "" H 650 5400 50  0000 C CNN
+	1    650  5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C2
+U 1 1 583ED495
+P 1000 4850
+F 0 "C2" H 1025 4950 50  0000 L CNN
+F 1 "100n" H 1025 4750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1038 4700 50  0001 C CNN
+F 3 "" H 1000 4850 50  0000 C CNN
+	1    1000 4850
+	0    1    1    0   
+$EndComp
+Text Label 3800 2650 2    60   ~ 0
+CLK
+Text Label 3450 5250 2    60   ~ 0
+CLK
+$Comp
+L BndUhr-rescue:R R5
+U 1 1 583EE721
+P 3950 5250
+F 0 "R5" V 4030 5250 50  0000 C CNN
+F 1 "10K" V 3950 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3880 5250 50  0001 C CNN
+F 3 "" H 3950 5250 50  0000 C CNN
+	1    3950 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR18
+U 1 1 583EED75
+P 4400 5100
+F 0 "#PWR18" H 4400 4950 50  0001 C CNN
+F 1 "+3.3V" H 4400 5240 50  0000 C CNN
+F 2 "" H 4400 5100 50  0000 C CNN
+F 3 "" H 4400 5100 50  0000 C CNN
+	1    4400 5100
+	0    1    1    0   
+$EndComp
+Text Label 5050 4750 2    60   ~ 0
+DO_MISO
+Text Label 5350 4850 2    60   ~ 0
+DI_MOSI
+Text Label 3750 3050 2    60   ~ 0
+SRG/~RTC
+NoConn ~ 3200 5050
+NoConn ~ 3200 5150
+NoConn ~ 7800 5550
+Text Label 3650 4950 2    60   ~ 0
+SRG/~RTC
+Text Label 6300 1050 2    60   ~ 0
+SRG/~RTC
+Text Label 3750 3250 2    60   ~ 0
+DCF77
+$Comp
+L BndUhr-rescue:CONN_01X04 P1
+U 1 1 583E0C82
+P 4850 3050
+F 0 "P1" H 4850 3300 50  0000 C CNN
+F 1 "CONN_01X04" V 4950 3050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4850 3050 50  0001 C CNN
+F 3 "" H 4850 3050 50  0000 C CNN
+	1    4850 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR16
+U 1 1 583E1CD4
+P 4250 2900
+F 0 "#PWR16" H 4250 2750 50  0001 C CNN
+F 1 "+3.3V" H 4250 3040 50  0000 C CNN
+F 2 "" H 4250 2900 50  0000 C CNN
+F 3 "" H 4250 2900 50  0000 C CNN
+	1    4250 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR17
+U 1 1 583E21DF
+P 4300 3100
+F 0 "#PWR17" H 4300 2850 50  0001 C CNN
+F 1 "GND" H 4300 2950 50  0000 C CNN
+F 2 "" H 4300 3100 50  0000 C CNN
+F 3 "" H 4300 3100 50  0000 C CNN
+	1    4300 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:R R4
+U 1 1 583E4E5D
+P 3950 4950
+F 0 "R4" V 4030 4950 50  0000 C CNN
+F 1 "10K" V 3950 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3880 4950 50  0001 C CNN
+F 3 "" H 3950 4950 50  0000 C CNN
+	1    3950 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:R R1
+U 1 1 583E5782
+P 2550 4200
+F 0 "R1" V 2630 4200 50  0000 C CNN
+F 1 "10K" V 2550 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2480 4200 50  0001 C CNN
+F 3 "" H 2550 4200 50  0000 C CNN
+	1    2550 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR12
+U 1 1 583E63AC
+P 2300 4200
+F 0 "#PWR12" H 2300 4050 50  0001 C CNN
+F 1 "+3.3V" H 2300 4340 50  0000 C CNN
+F 2 "" H 2300 4200 50  0000 C CNN
+F 3 "" H 2300 4200 50  0000 C CNN
+	1    2300 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X06 P2
+U 1 1 583E8992
+P 5100 2300
+F 0 "P2" H 5100 2650 50  0000 C CNN
+F 1 "CONN_01X06" V 5200 2300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 5100 2300 50  0001 C CNN
+F 3 "" H 5100 2300 50  0000 C CNN
+	1    5100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C6
+U 1 1 583ED434
+P 1300 6150
+F 0 "C6" H 1325 6250 50  0000 L CNN
+F 1 "100n" H 1325 6050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1338 6000 50  0001 C CNN
+F 3 "" H 1300 6150 50  0000 C CNN
+	1    1300 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:+BATT #PWR7
+U 1 1 583EEDE2
+P 1350 4750
+F 0 "#PWR7" H 1350 4600 50  0001 C CNN
+F 1 "+BATT" H 1350 4890 50  0000 C CNN
+F 2 "" H 1350 4750 50  0000 C CNN
+F 3 "" H 1350 4750 50  0000 C CNN
+	1    1350 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR13
+U 1 1 583F2D31
+P 2850 950
+F 0 "#PWR13" H 2850 800 50  0001 C CNN
+F 1 "+3.3V" H 2850 1090 50  0000 C CNN
+F 2 "" H 2850 950 50  0000 C CNN
+F 3 "" H 2850 950 50  0000 C CNN
+	1    2850 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:TLV70233DBV U1
+U 1 1 583F874D
+P 2200 1300
+F 0 "U1" H 1950 1500 50  0000 C CNN
+F 1 "TLV70233DBV" H 2300 1500 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 2200 1400 50  0000 C CIN
+F 3 "" H 2200 1300 50  0000 C CNN
+	1    2200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C4
+U 1 1 583F8AA4
+P 1450 1400
+F 0 "C4" H 1475 1500 50  0000 L CNN
+F 1 "1u" H 1475 1300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1488 1250 50  0001 C CNN
+F 3 "" H 1450 1400 50  0000 C CNN
+	1    1450 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C5
+U 1 1 583F8B4B
+P 2850 1400
+F 0 "C5" H 2875 1500 50  0000 L CNN
+F 1 "1u" H 2875 1300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2888 1250 50  0001 C CNN
+F 3 "" H 2850 1400 50  0000 C CNN
+	1    2850 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR11
+U 1 1 583F97D1
+P 2200 1850
+F 0 "#PWR11" H 2200 1600 50  0001 C CNN
+F 1 "GND" H 2200 1700 50  0000 C CNN
+F 2 "" H 2200 1850 50  0000 C CNN
+F 3 "" H 2200 1850 50  0000 C CNN
+	1    2200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR8
+U 1 1 583FB49A
+P 1450 1000
+F 0 "#PWR8" H 1450 850 50  0001 C CNN
+F 1 "VCC" H 1450 1150 50  0000 C CNN
+F 2 "" H 1450 1000 50  0000 C CNN
+F 3 "" H 1450 1000 50  0000 C CNN
+	1    1450 1000
+	1    0    0    -1  
+$EndComp
+Text Label 8100 3350 2    60   ~ 0
+LD24
+Text Label 8100 3450 2    60   ~ 0
+LD23
+Text Label 8100 3550 2    60   ~ 0
+LD22
+Text Label 8100 3650 2    60   ~ 0
+LD21
+Text Label 8100 3750 2    60   ~ 0
+LD20
+Text Label 8100 3850 2    60   ~ 0
+LD19
+Text Label 8100 3950 2    60   ~ 0
+LD18
+Text Label 8100 4050 2    60   ~ 0
+LD17
+Text Label 8100 5350 2    60   ~ 0
+LD25
+Text Label 8100 5250 2    60   ~ 0
+LD26
+Text Label 8100 5150 2    60   ~ 0
+LD27
+Text Label 8100 5050 2    60   ~ 0
+LD28
+Text Label 8100 4950 2    60   ~ 0
+LD29
+Text Label 8100 4850 2    60   ~ 0
+LD30
+Text Label 8100 4750 2    60   ~ 0
+LD31
+Text Label 8100 4650 2    60   ~ 0
+LD32
+$Comp
+L BndUhr-rescue:C C7
+U 1 1 58400A59
+P 10100 5050
+F 0 "C7" H 10125 5150 50  0000 L CNN
+F 1 "1u" H 10125 4950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10138 4900 50  0001 C CNN
+F 3 "" H 10100 5050 50  0000 C CNN
+	1    10100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C8
+U 1 1 58401CEF
+P 10350 5050
+F 0 "C8" H 10375 5150 50  0000 L CNN
+F 1 "1u" H 10375 4950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10388 4900 50  0001 C CNN
+F 3 "" H 10350 5050 50  0000 C CNN
+	1    10350 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR33
+U 1 1 5840240D
+P 10550 4700
+F 0 "#PWR33" H 10550 4550 50  0001 C CNN
+F 1 "VCC" H 10550 4850 50  0000 C CNN
+F 2 "" H 10550 4700 50  0000 C CNN
+F 3 "" H 10550 4700 50  0000 C CNN
+	1    10550 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR34
+U 1 1 58402FA9
+P 10550 5400
+F 0 "#PWR34" H 10550 5150 50  0001 C CNN
+F 1 "GND" H 10550 5250 50  0000 C CNN
+F 2 "" H 10550 5400 50  0000 C CNN
+F 3 "" H 10550 5400 50  0000 C CNN
+	1    10550 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:R R3
+U 1 1 58404F13
+P 3950 3000
+F 0 "R3" V 4030 3000 50  0000 C CNN
+F 1 "10K" V 3950 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3880 3000 50  0001 C CNN
+F 3 "" H 3950 3000 50  0000 C CNN
+	1    3950 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:R R9
+U 1 1 5840FDF2
+P 5550 1400
+F 0 "R9" V 5630 1400 50  0000 C CNN
+F 1 "10K" V 5550 1400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5480 1400 50  0001 C CNN
+F 3 "" H 5550 1400 50  0000 C CNN
+	1    5550 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR24
+U 1 1 5841131E
+P 5250 1300
+F 0 "#PWR24" H 5250 1150 50  0001 C CNN
+F 1 "+3.3V" H 5250 1440 50  0000 C CNN
+F 2 "" H 5250 1300 50  0000 C CNN
+F 3 "" H 5250 1300 50  0000 C CNN
+	1    5250 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:D_Schottky_x2_Serial_AKC D1
+U 1 1 58422914
+P 3350 4200
+F 0 "D1" H 3400 4100 50  0000 C CNN
+F 1 "D_Schottky_x2_Serial_AKC" H 3350 4300 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3350 4200 50  0001 C CNN
+F 3 "" H 3350 4200 50  0000 C CNN
+	1    3350 4200
+	1    0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:R R8
+U 1 1 5842A264
+P 4600 4850
+F 0 "R8" V 4680 4850 50  0000 C CNN
+F 1 "10K" V 4600 4850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4530 4850 50  0001 C CNN
+F 3 "" H 4600 4850 50  0000 C CNN
+	1    4600 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR32
+U 1 1 58DBB182
+P 9700 4250
+F 0 "#PWR32" H 9700 4100 50  0001 C CNN
+F 1 "VCC" H 9700 4400 50  0000 C CNN
+F 2 "" H 9700 4250 50  0000 C CNN
+F 3 "" H 9700 4250 50  0000 C CNN
+	1    9700 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR28
+U 1 1 58DBB1F3
+P 8350 5600
+F 0 "#PWR28" H 8350 5350 50  0001 C CNN
+F 1 "GND" H 8350 5450 50  0000 C CNN
+F 2 "" H 8350 5600 50  0000 C CNN
+F 3 "" H 8350 5600 50  0000 C CNN
+	1    8350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR27
+U 1 1 58DBB35B
+P 8350 4350
+F 0 "#PWR27" H 8350 4100 50  0001 C CNN
+F 1 "GND" H 8350 4200 50  0000 C CNN
+F 2 "" H 8350 4350 50  0000 C CNN
+F 3 "" H 8350 4350 50  0000 C CNN
+	1    8350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR26
+U 1 1 58DBB4C5
+P 8350 3050
+F 0 "#PWR26" H 8350 2800 50  0001 C CNN
+F 1 "GND" H 8350 2900 50  0000 C CNN
+F 2 "" H 8350 3050 50  0000 C CNN
+F 3 "" H 8350 3050 50  0000 C CNN
+	1    8350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR25
+U 1 1 58DBB830
+P 8350 1750
+F 0 "#PWR25" H 8350 1500 50  0001 C CNN
+F 1 "GND" H 8350 1600 50  0000 C CNN
+F 2 "" H 8350 1750 50  0000 C CNN
+F 3 "" H 8350 1750 50  0000 C CNN
+	1    8350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:ULN280*A U6
+U 1 1 58DBCBC8
+P 8950 1150
+F 0 "U6" H 8650 1650 60  0000 C CNN
+F 1 "ULN280*A" H 8800 550 60  0000 C CNN
+F 2 "Housings_DIP:DIP-18_W7.62mm" H 8950 1550 60  0001 C CNN
+F 3 "" H 8950 1550 60  0000 C CNN
+	1    8950 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:ULN280*A U7
+U 1 1 58DBCE2E
+P 8950 2450
+F 0 "U7" H 8650 2950 60  0000 C CNN
+F 1 "ULN280*A" H 8800 1850 60  0000 C CNN
+F 2 "Housings_DIP:DIP-18_W7.62mm" H 8950 2850 60  0001 C CNN
+F 3 "" H 8950 2850 60  0000 C CNN
+	1    8950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:ULN280*A U8
+U 1 1 58DBD180
+P 8950 3750
+F 0 "U8" H 8650 4250 60  0000 C CNN
+F 1 "ULN280*A" H 8800 3150 60  0000 C CNN
+F 2 "Housings_DIP:DIP-18_W7.62mm" H 8950 4150 60  0001 C CNN
+F 3 "" H 8950 4150 60  0000 C CNN
+	1    8950 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:ULN280*A U9
+U 1 1 58DBD430
+P 8950 5050
+F 0 "U9" H 8650 5550 60  0000 C CNN
+F 1 "ULN280*A" H 8800 4450 60  0000 C CNN
+F 2 "Housings_DIP:DIP-18_W7.62mm" H 8950 5450 60  0001 C CNN
+F 3 "" H 8950 5450 60  0000 C CNN
+	1    8950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR30
+U 1 1 58DBD5E0
+P 9650 5550
+F 0 "#PWR30" H 9650 5400 50  0001 C CNN
+F 1 "VCC" H 9650 5700 50  0000 C CNN
+F 2 "" H 9650 5550 50  0000 C CNN
+F 3 "" H 9650 5550 50  0000 C CNN
+	1    9650 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR31
+U 1 1 58DBD9A3
+P 9700 2950
+F 0 "#PWR31" H 9700 2800 50  0001 C CNN
+F 1 "VCC" H 9700 3100 50  0000 C CNN
+F 2 "" H 9700 2950 50  0000 C CNN
+F 3 "" H 9700 2950 50  0000 C CNN
+	1    9700 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR29
+U 1 1 58DBDBAC
+P 9650 1650
+F 0 "#PWR29" H 9650 1500 50  0001 C CNN
+F 1 "VCC" H 9650 1800 50  0000 C CNN
+F 2 "" H 9650 1650 50  0000 C CNN
+F 3 "" H 9650 1650 50  0000 C CNN
+	1    9650 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X08 P3
+U 1 1 58DBEFB9
+P 9750 1100
+F 0 "P3" H 9750 1550 50  0000 C CNN
+F 1 "CONN_01X08" V 9850 1100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x08_Pitch2.54mm" H 9750 1100 50  0001 C CNN
+F 3 "" H 9750 1100 50  0000 C CNN
+	1    9750 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X08 P4
+U 1 1 58DBFB65
+P 9750 2400
+F 0 "P4" H 9750 2850 50  0000 C CNN
+F 1 "CONN_01X08" V 9850 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x08_Pitch2.54mm" H 9750 2400 50  0001 C CNN
+F 3 "" H 9750 2400 50  0000 C CNN
+	1    9750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X08 P5
+U 1 1 58DBFC07
+P 9750 3700
+F 0 "P5" H 9750 4150 50  0000 C CNN
+F 1 "CONN_01X08" V 9850 3700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x08_Pitch2.54mm" H 9750 3700 50  0001 C CNN
+F 3 "" H 9750 3700 50  0000 C CNN
+	1    9750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X08 P6
+U 1 1 58DBFDE6
+P 9750 5000
+F 0 "P6" H 9750 5450 50  0000 C CNN
+F 1 "CONN_01X08" V 9850 5000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x08_Pitch2.54mm" H 9750 5000 50  0001 C CNN
+F 3 "" H 9750 5000 50  0000 C CNN
+	1    9750 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_02X03 P7
+U 1 1 58DC2C44
+P 4100 5900
+F 0 "P7" H 4100 6100 50  0000 C CNN
+F 1 "CONN_02X03" H 4100 5700 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_6pins" H 4100 4700 50  0001 C CNN
+F 3 "" H 4100 4700 50  0000 C CNN
+	1    4100 5900
+	1    0    0    -1  
+$EndComp
+Text Label 3450 5800 0    60   ~ 0
+DO_MISO
+Text Label 3450 5900 0    60   ~ 0
+SCK
+Text Label 3450 6000 0    60   ~ 0
+~RESET
+Text Label 4750 5900 2    60   ~ 0
+DI_MOSI
+$Comp
+L BndUhr-rescue:CP C9
+U 1 1 58DC4BC9
+P 1650 6150
+F 0 "C9" H 1675 6250 50  0000 L CNN
+F 1 "CP" H 1675 6050 50  0000 L CNN
+F 2 "MyLib:Panasonic-SuperCap-20mm" H 1688 6000 50  0001 C CNN
+F 3 "" H 1650 6150 50  0000 C CNN
+	1    1650 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:D_Schottky_x2_Serial_AKC D2
+U 1 1 58DC6518
+P 2200 5800
+F 0 "D2" H 2250 5700 50  0000 C CNN
+F 1 "D_Schottky_x2_Serial_AKC" H 2200 5900 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2200 5800 50  0001 C CNN
+F 3 "" H 2200 5800 50  0000 C CNN
+	1    2200 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:VCC #PWR14
+U 1 1 58DC855F
+P 3050 5700
+F 0 "#PWR14" H 3050 5550 50  0001 C CNN
+F 1 "VCC" H 3050 5850 50  0000 C CNN
+F 2 "" H 3050 5700 50  0000 C CNN
+F 3 "" H 3050 5700 50  0000 C CNN
+	1    3050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR10
+U 1 1 58DCAABE
+P 1650 6600
+F 0 "#PWR10" H 1650 6350 50  0001 C CNN
+F 1 "GND" H 1650 6450 50  0000 C CNN
+F 2 "" H 1650 6600 50  0000 C CNN
+F 3 "" H 1650 6600 50  0000 C CNN
+	1    1650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:R R10
+U 1 1 58DCB043
+P 2650 5800
+F 0 "R10" V 2730 5800 50  0000 C CNN
+F 1 "100R" V 2650 5800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2580 5800 50  0001 C CNN
+F 3 "" H 2650 5800 50  0000 C CNN
+	1    2650 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:R R11
+U 1 1 58DCB1A9
+P 2200 6200
+F 0 "R11" V 2300 6200 50  0000 C CNN
+F 1 "1K" V 2200 6200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 2130 6200 50  0001 C CNN
+F 3 "" H 2200 6200 50  0000 C CNN
+	1    2200 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+BATT #PWR9
+U 1 1 58DCBE0C
+P 1650 5650
+F 0 "#PWR9" H 1650 5500 50  0001 C CNN
+F 1 "+BATT" H 1650 5790 50  0000 C CNN
+F 2 "" H 1650 5650 50  0000 C CNN
+F 3 "" H 1650 5650 50  0000 C CNN
+	1    1650 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+3.3V #PWR22
+U 1 1 58DCDF95
+P 4900 5800
+F 0 "#PWR22" H 4900 5650 50  0001 C CNN
+F 1 "+3.3V" H 4900 5940 50  0000 C CNN
+F 2 "" H 4900 5800 50  0000 C CNN
+F 3 "" H 4900 5800 50  0000 C CNN
+	1    4900 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR23
+U 1 1 58DCE050
+P 4900 6100
+F 0 "#PWR23" H 4900 5850 50  0001 C CNN
+F 1 "GND" H 4900 5950 50  0000 C CNN
+F 2 "" H 4900 6100 50  0000 C CNN
+F 3 "" H 4900 6100 50  0000 C CNN
+	1    4900 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:LED D3
+U 1 1 58DD2C7A
+P 3550 1550
+F 0 "D3" H 3550 1650 50  0000 C CNN
+F 1 "LED" H 3550 1450 50  0000 C CNN
+F 2 "LEDs:LED_1206" H 3550 1550 50  0001 C CNN
+F 3 "" H 3550 1550 50  0000 C CNN
+	1    3550 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:R R12
+U 1 1 58DD3461
+P 3350 1950
+F 0 "R12" V 3430 1950 50  0000 C CNN
+F 1 "1K" V 3350 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3280 1950 50  0001 C CNN
+F 3 "" H 3350 1950 50  0000 C CNN
+	1    3350 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:FUSE F1
+U 1 1 58DD42D6
+P 1100 1150
+F 0 "F1" H 1200 1200 50  0000 C CNN
+F 1 "FUSE" H 1000 1100 50  0000 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_open_universal_Type-III" H 1100 1150 50  0001 C CNN
+F 3 "" H 1100 1150 50  0000 C CNN
+	1    1100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:+5V #PWR3
+U 1 1 58DD4BD5
+P 700 950
+F 0 "#PWR3" H 700 800 50  0001 C CNN
+F 1 "+5V" H 700 1090 50  0000 C CNN
+F 2 "" H 700 950 50  0000 C CNN
+F 3 "" H 700 950 50  0000 C CNN
+	1    700  950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C11
+U 1 1 58DD98C5
+P 10950 5050
+F 0 "C11" H 10975 5150 50  0000 L CNN
+F 1 "1u" H 10975 4950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10988 4900 50  0001 C CNN
+F 3 "" H 10950 5050 50  0000 C CNN
+	1    10950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:C C10
+U 1 1 58DD9985
+P 10700 5050
+F 0 "C10" H 10725 5150 50  0000 L CNN
+F 1 "1u" H 10725 4950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10738 4900 50  0001 C CNN
+F 3 "" H 10700 5050 50  0000 C CNN
+	1    10700 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BndUhr-rescue:TEST_1P W1
+U 1 1 58DDB36F
+P 700 1250
+F 0 "W1" H 700 1520 50  0000 C CNN
+F 1 "TEST_1P" H 700 1450 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_2-5mmDrill" H 900 1250 50  0001 C CNN
+F 3 "" H 900 1250 50  0000 C CNN
+	1    700  1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:TEST_1P W2
+U 1 1 58DDB462
+P 1300 1700
+F 0 "W2" H 1300 1970 50  0000 C CNN
+F 1 "TEST_1P" H 1300 1900 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_2-5mmDrill" H 1500 1700 50  0001 C CNN
+F 3 "" H 1500 1700 50  0000 C CNN
+	1    1300 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L BndUhr-rescue:CONN_01X04 P8
+U 1 1 58DDCD3C
+P 850 2350
+F 0 "P8" H 850 2600 50  0000 C CNN
+F 1 "CONN_01X04" V 950 2350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 850 2350 50  0001 C CNN
+F 3 "" H 850 2350 50  0000 C CNN
+	1    850  2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2050 8400 2050
+Wire Wire Line
+	7750 2150 8400 2150
+Wire Wire Line
+	7750 2250 8400 2250
+Wire Wire Line
+	7750 2350 8400 2350
+Wire Wire Line
+	7750 2450 8400 2450
+Wire Wire Line
+	7750 2550 8400 2550
+Wire Wire Line
+	7750 2650 8400 2650
+Wire Wire Line
+	7750 2750 8400 2750
+Wire Wire Line
+	7800 750  8400 750 
+Wire Wire Line
+	7800 850  8400 850 
+Wire Wire Line
+	7800 950  8400 950 
+Wire Wire Line
+	7800 1050 8400 1050
+Wire Wire Line
+	7800 1150 8400 1150
+Wire Wire Line
+	7800 1250 8400 1250
+Wire Wire Line
+	7800 1350 8400 1350
+Wire Wire Line
+	7800 1450 8400 1450
+Wire Wire Line
+	7800 1650 7900 1650
+Wire Wire Line
+	6250 3350 6400 3350
+Wire Wire Line
+	6400 4650 6350 4650
+Wire Wire Line
+	6350 4650 6350 4450
+Wire Wire Line
+	6350 4450 7900 4450
+Wire Wire Line
+	7900 4450 7900 4250
+Wire Wire Line
+	7900 4250 7800 4250
+Wire Wire Line
+	6100 5250 6400 5250
+Wire Wire Line
+	6100 1350 6100 1400
+Wire Wire Line
+	6000 1250 6000 2550
+Wire Wire Line
+	6000 5150 6400 5150
+Wire Wire Line
+	5900 1050 5900 2350
+Wire Wire Line
+	5900 4950 6400 4950
+Wire Wire Line
+	5800 4850 6400 4850
+Connection ~ 5800 2250
+Connection ~ 5900 2350
+Connection ~ 6000 2550
+Connection ~ 6100 2650
+Wire Wire Line
+	5800 3550 6400 3550
+Connection ~ 5800 3550
+Wire Wire Line
+	6400 3650 5900 3650
+Connection ~ 5900 3650
+Wire Wire Line
+	6400 3850 6000 3850
+Connection ~ 6000 3850
+Wire Wire Line
+	6400 3950 6100 3950
+Connection ~ 6100 3950
+Wire Wire Line
+	1300 2350 1150 2350
+Wire Wire Line
+	1150 2250 1150 2350
+Wire Wire Line
+	600  3550 1150 3550
+Wire Wire Line
+	1150 3050 1150 3550
+Connection ~ 1150 2350
+Connection ~ 1150 3550
+Wire Wire Line
+	5800 2750 3400 2750
+Connection ~ 5800 2750
+Wire Wire Line
+	3400 2950 3750 2950
+Wire Wire Line
+	3400 3450 6100 3450
+Connection ~ 6100 3450
+Wire Wire Line
+	3400 3350 6000 3350
+Connection ~ 6000 3350
+Wire Wire Line
+	3400 2850 3750 2850
+Wire Wire Line
+	3400 3550 3850 3550
+Wire Wire Line
+	5900 1050 6400 1050
+Wire Wire Line
+	6000 1250 6400 1250
+Wire Wire Line
+	6100 1350 6400 1350
+Wire Wire Line
+	6100 750  6400 750 
+Wire Wire Line
+	5800 950  5800 2250
+Wire Wire Line
+	6400 950  5800 950 
+Wire Wire Line
+	6350 2650 6100 2650
+Wire Wire Line
+	6350 2550 6000 2550
+Wire Wire Line
+	6350 2350 5900 2350
+Wire Wire Line
+	6350 2250 5800 2250
+Wire Wire Line
+	6350 2050 6250 2050
+Wire Wire Line
+	6250 2050 6250 1850
+Wire Wire Line
+	6250 1850 7900 1850
+Wire Wire Line
+	7900 1850 7900 1650
+Wire Wire Line
+	7750 2950 7850 2950
+Wire Wire Line
+	7850 2950 7850 3150
+Wire Wire Line
+	7850 3150 6250 3150
+Wire Wire Line
+	6250 3150 6250 3350
+Wire Wire Line
+	3400 2450 4050 2450
+Wire Wire Line
+	3850 1700 3850 2150
+Wire Wire Line
+	4050 2450 4050 1700
+Connection ~ 4050 2450
+Wire Wire Line
+	4250 1700 4250 2550
+Connection ~ 4250 2550
+Wire Wire Line
+	4050 1200 4050 1300
+Wire Wire Line
+	3550 1300 3850 1300
+Wire Wire Line
+	3850 1300 3850 1400
+Wire Wire Line
+	4250 1300 4250 1400
+Connection ~ 4050 1300
+Wire Wire Line
+	1300 4650 1500 4650
+Wire Wire Line
+	1300 4400 1300 4500
+Wire Wire Line
+	1150 4500 1300 4500
+Connection ~ 1300 4500
+Wire Wire Line
+	850  4500 650  4500
+Wire Wire Line
+	650  4500 650  4850
+Wire Wire Line
+	1500 5250 650  5250
+Wire Wire Line
+	1500 5050 650  5050
+Connection ~ 650  5250
+Connection ~ 650  5050
+Wire Wire Line
+	1500 4850 1150 4850
+Wire Wire Line
+	850  4850 650  4850
+Connection ~ 650  4850
+Wire Wire Line
+	3200 4650 5800 4650
+Connection ~ 5800 4650
+Wire Wire Line
+	3400 2650 3800 2650
+Wire Wire Line
+	3200 5250 3650 5250
+Wire Wire Line
+	4300 5250 4100 5250
+Wire Wire Line
+	3200 4750 5050 4750
+Wire Wire Line
+	3200 4950 3800 4950
+Wire Wire Line
+	3400 3050 3750 3050
+Wire Wire Line
+	4250 2900 4350 2900
+Wire Wire Line
+	4300 3100 4350 3100
+Wire Wire Line
+	4350 3000 4350 3100
+Wire Wire Line
+	4350 3000 4650 3000
+Connection ~ 4350 3100
+Wire Wire Line
+	3400 3250 3950 3250
+Wire Wire Line
+	4500 3250 4500 3100
+Wire Wire Line
+	4500 3100 4650 3100
+Wire Wire Line
+	4350 3200 4450 3200
+Wire Wire Line
+	4450 3200 4450 3150
+Wire Wire Line
+	4450 3150 4550 3150
+Wire Wire Line
+	4550 3150 4550 3200
+Wire Wire Line
+	4550 3200 4650 3200
+Wire Wire Line
+	4100 4950 4300 4950
+Wire Wire Line
+	4300 4950 4300 5100
+Wire Wire Line
+	4300 5100 4400 5100
+Connection ~ 4300 5100
+Wire Wire Line
+	1500 4750 1350 4750
+Wire Wire Line
+	3850 2350 3400 2350
+Wire Wire Line
+	3400 2550 4250 2550
+Wire Wire Line
+	3850 3550 3850 3950
+Wire Wire Line
+	3850 3950 3350 3950
+Wire Wire Line
+	1450 1550 1450 1700
+Wire Wire Line
+	2200 1600 2200 1700
+Wire Wire Line
+	2850 1550 2850 1700
+Connection ~ 2200 1700
+Wire Wire Line
+	1450 1000 1450 1150
+Wire Wire Line
+	1350 1150 1450 1150
+Wire Wire Line
+	1700 1150 1700 1250
+Wire Wire Line
+	1700 1250 1750 1250
+Wire Wire Line
+	2650 1250 2750 1250
+Wire Wire Line
+	2750 1250 2750 1150
+Wire Wire Line
+	2750 1150 2850 1150
+Wire Wire Line
+	2850 950  2850 1150
+Connection ~ 2850 1150
+Connection ~ 1450 1150
+Wire Wire Line
+	1700 1400 1750 1400
+Connection ~ 1700 1250
+Wire Wire Line
+	10550 5300 10550 5400
+Wire Wire Line
+	10100 5300 10350 5300
+Wire Wire Line
+	10350 5300 10350 5200
+Wire Wire Line
+	10700 5300 10700 5200
+Connection ~ 10550 5300
+Wire Wire Line
+	10350 4800 10350 4900
+Wire Wire Line
+	10100 4800 10350 4800
+Wire Wire Line
+	10550 4800 10550 4700
+Wire Wire Line
+	10700 4800 10700 4900
+Connection ~ 10550 4800
+Wire Wire Line
+	3950 2850 3950 2800
+Wire Wire Line
+	3950 2800 4350 2800
+Wire Wire Line
+	4350 2800 4350 2900
+Connection ~ 4350 2900
+Wire Wire Line
+	3950 3150 3950 3250
+Connection ~ 3950 3250
+Wire Wire Line
+	5400 1400 5250 1400
+Wire Wire Line
+	5250 1400 5250 1300
+Wire Wire Line
+	5700 1400 6100 1400
+Connection ~ 6100 1400
+Wire Wire Line
+	2300 4200 2400 4200
+Wire Wire Line
+	3350 3950 3350 4000
+Wire Wire Line
+	3050 4200 2700 4200
+Wire Wire Line
+	3200 4850 4450 4850
+Wire Wire Line
+	4750 4850 5350 4850
+Wire Wire Line
+	7800 3350 8400 3350
+Wire Wire Line
+	7800 3450 8400 3450
+Wire Wire Line
+	7800 3550 8400 3550
+Wire Wire Line
+	7800 3650 8400 3650
+Wire Wire Line
+	7800 3750 8400 3750
+Wire Wire Line
+	7800 3850 8400 3850
+Wire Wire Line
+	7800 3950 8400 3950
+Wire Wire Line
+	7800 4050 8400 4050
+Wire Wire Line
+	7800 4650 8400 4650
+Wire Wire Line
+	7800 4750 8400 4750
+Wire Wire Line
+	7800 4850 8400 4850
+Wire Wire Line
+	7800 4950 8400 4950
+Wire Wire Line
+	7800 5050 8400 5050
+Wire Wire Line
+	7800 5150 8400 5150
+Wire Wire Line
+	7800 5250 8400 5250
+Wire Wire Line
+	7800 5350 8400 5350
+Wire Wire Line
+	8400 5550 8350 5550
+Wire Wire Line
+	8350 5550 8350 5600
+Wire Wire Line
+	8400 4250 8350 4250
+Wire Wire Line
+	8350 4250 8350 4350
+Wire Wire Line
+	8400 2950 8350 2950
+Wire Wire Line
+	8350 2950 8350 3050
+Wire Wire Line
+	8400 1650 8350 1650
+Wire Wire Line
+	8350 1650 8350 1750
+Wire Wire Line
+	9550 1650 9650 1650
+Wire Wire Line
+	9550 2950 9700 2950
+Wire Wire Line
+	9550 4250 9700 4250
+Wire Wire Line
+	9550 5550 9650 5550
+Wire Wire Line
+	3450 5800 3850 5800
+Wire Wire Line
+	3850 5900 3450 5900
+Wire Wire Line
+	3850 6000 3450 6000
+Wire Wire Line
+	4350 6000 4900 6000
+Wire Wire Line
+	4750 5900 4350 5900
+Wire Wire Line
+	4350 5800 4900 5800
+Wire Wire Line
+	2800 5800 3050 5800
+Wire Wire Line
+	3050 5800 3050 5700
+Wire Wire Line
+	1650 5650 1650 5800
+Wire Wire Line
+	1650 6300 1650 6500
+Connection ~ 1650 5800
+Wire Wire Line
+	4900 6000 4900 6100
+Connection ~ 1650 6500
+Wire Wire Line
+	2200 6500 2200 6350
+Wire Wire Line
+	2200 6050 2200 6000
+Wire Wire Line
+	1300 6500 1650 6500
+Wire Wire Line
+	1300 5800 1650 5800
+Wire Wire Line
+	3550 1300 3550 1350
+Connection ~ 3850 1300
+Wire Wire Line
+	3550 1750 3550 1950
+Wire Wire Line
+	3550 1950 3500 1950
+Wire Wire Line
+	2850 1950 3200 1950
+Wire Wire Line
+	850  1150 700  1150
+Wire Wire Line
+	700  950  700  1150
+Wire Wire Line
+	1300 1700 1450 1700
+Connection ~ 2850 1700
+Wire Wire Line
+	10950 4800 10950 4900
+Connection ~ 10700 4800
+Wire Wire Line
+	10950 5300 10950 5200
+Connection ~ 10700 5300
+Wire Wire Line
+	10100 5300 10100 5200
+Connection ~ 10350 5300
+Wire Wire Line
+	10100 4900 10100 4800
+Connection ~ 10350 4800
+Connection ~ 1450 1700
+Connection ~ 700  1150
+$Comp
+L BndUhr-rescue:VCC #PWR1
+U 1 1 58DE1B43
+P 550 2000
+F 0 "#PWR1" H 550 1850 50  0001 C CNN
+F 1 "VCC" H 550 2150 50  0000 C CNN
+F 2 "" H 550 2000 50  0000 C CNN
+F 3 "" H 550 2000 50  0000 C CNN
+	1    550  2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	550  2000 550  2200
+Wire Wire Line
+	550  2200 650  2200
+Wire Wire Line
+	550  2300 650  2300
+Connection ~ 550  2200
+Wire Wire Line
+	550  2400 650  2400
+Connection ~ 550  2300
+Wire Wire Line
+	550  2500 600  2500
+Connection ~ 550  2400
+$Comp
+L BndUhr-rescue:CP C12
+U 1 1 58DE3563
+P 600 2850
+F 0 "C12" H 625 2950 50  0000 L CNN
+F 1 "100u" H 625 2750 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D8.0mm_P5.00mm" H 638 2700 50  0001 C CNN
+F 3 "" H 600 2850 50  0000 C CNN
+	1    600  2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	600  3550 600  3000
+Wire Wire Line
+	600  2700 600  2500
+Connection ~ 600  2500
+Wire Wire Line
+	1300 5800 1300 6000
+Wire Wire Line
+	1300 6300 1300 6500
+Wire Wire Line
+	4500 2450 4500 2350
+Wire Wire Line
+	4500 2350 4900 2350
+Wire Wire Line
+	4900 2150 3850 2150
+Connection ~ 3850 2150
+$Comp
+L BndUhr-rescue:GND #PWR20
+U 1 1 58DE87A1
+P 4850 2250
+F 0 "#PWR20" H 4850 2000 50  0001 C CNN
+F 1 "GND" H 4850 2100 50  0000 C CNN
+F 2 "" H 4850 2250 50  0000 C CNN
+F 3 "" H 4850 2250 50  0000 C CNN
+	1    4850 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L BndUhr-rescue:GND #PWR21
+U 1 1 58DE883F
+P 4850 2450
+F 0 "#PWR21" H 4850 2200 50  0001 C CNN
+F 1 "GND" H 4850 2300 50  0000 C CNN
+F 2 "" H 4850 2450 50  0000 C CNN
+F 3 "" H 4850 2450 50  0000 C CNN
+	1    4850 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 2050 4850 2050
+Wire Wire Line
+	4900 2250 4850 2250
+Wire Wire Line
+	4900 2450 4850 2450
+$Comp
+L BndUhr-rescue:TEST_1P W5
+U 1 1 58DD751C
+P 6100 5700
+F 0 "W5" H 6100 5970 50  0000 C CNN
+F 1 "~OE" H 6100 5900 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6300 5700 50  0001 C CNN
+F 3 "" H 6300 5700 50  0000 C CNN
+	1    6100 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:TEST_1P W4
+U 1 1 58DD8DF6
+P 6000 5400
+F 0 "W4" H 6000 5670 50  0000 C CNN
+F 1 "RCLK" H 6000 5600 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6200 5400 50  0001 C CNN
+F 3 "" H 6200 5400 50  0000 C CNN
+	1    6000 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L BndUhr-rescue:TEST_1P W3
+U 1 1 58DD8EA7
+P 5900 5100
+F 0 "W3" H 5900 5370 50  0000 C CNN
+F 1 "~RTC" H 5900 5300 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6100 5100 50  0001 C CNN
+F 3 "" H 6100 5100 50  0000 C CNN
+	1    5900 5100
+	-1   0    0    1   
+$EndComp
+Connection ~ 6100 5250
+Connection ~ 6000 5150
+Connection ~ 5900 4950
+$Comp
+L BndUhr-rescue:TEST_1P W6
+U 1 1 58DDBF96
+P 3650 5350
+F 0 "W6" H 3650 5620 50  0000 C CNN
+F 1 "CLK" H 3650 5550 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3850 5350 50  0001 C CNN
+F 3 "" H 3850 5350 50  0000 C CNN
+	1    3650 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 5350 3650 5250
+Connection ~ 3650 5250
+Wire Wire Line
+	5800 2250 5800 2750
+Wire Wire Line
+	6000 2550 6000 3350
+Wire Wire Line
+	6100 2650 6100 3450
+Wire Wire Line
+	5800 3550 5800 4650
+Wire Wire Line
+	5900 3650 5900 4950
+Wire Wire Line
+	6000 3850 6000 5150
+Wire Wire Line
+	6100 3950 6100 5250
+Wire Wire Line
+	1150 2350 1150 2750
+Wire Wire Line
+	1150 3550 1300 3550
+Wire Wire Line
+	1150 3550 1150 3650
+Wire Wire Line
+	5800 2750 5800 3550
+Wire Wire Line
+	6100 3450 6100 3950
+Wire Wire Line
+	6000 3350 6000 3850
+Wire Wire Line
+	4050 2450 4500 2450
+Wire Wire Line
+	4250 2550 4900 2550
+Wire Wire Line
+	4050 1300 4050 1400
+Wire Wire Line
+	4050 1300 4250 1300
+Wire Wire Line
+	1300 4500 1300 4650
+Wire Wire Line
+	650  5250 650  5400
+Wire Wire Line
+	650  5050 650  5250
+Wire Wire Line
+	650  4850 650  5050
+Wire Wire Line
+	5800 4650 5800 4850
+Wire Wire Line
+	4350 3100 4350 3200
+Wire Wire Line
+	4300 5100 4300 5250
+Wire Wire Line
+	2200 1700 2200 1850
+Wire Wire Line
+	2200 1700 2850 1700
+Wire Wire Line
+	2850 1150 2850 1250
+Wire Wire Line
+	1450 1150 1450 1250
+Wire Wire Line
+	1450 1150 1700 1150
+Wire Wire Line
+	1700 1250 1700 1400
+Wire Wire Line
+	10550 5300 10700 5300
+Wire Wire Line
+	10550 4800 10700 4800
+Wire Wire Line
+	4350 2900 4650 2900
+Wire Wire Line
+	3950 3250 4500 3250
+Wire Wire Line
+	6100 1400 6100 2650
+Wire Wire Line
+	1650 5800 1650 6000
+Wire Wire Line
+	1650 5800 1900 5800
+Wire Wire Line
+	1650 6500 1650 6600
+Wire Wire Line
+	1650 6500 2200 6500
+Wire Wire Line
+	3850 1300 4050 1300
+Wire Wire Line
+	2850 1700 2850 1950
+Wire Wire Line
+	10700 4800 10950 4800
+Wire Wire Line
+	10700 5300 10950 5300
+Wire Wire Line
+	10350 5300 10550 5300
+Wire Wire Line
+	10350 4800 10550 4800
+Wire Wire Line
+	1450 1700 2200 1700
+Wire Wire Line
+	700  1150 700  1250
+Wire Wire Line
+	550  2200 550  2300
+Wire Wire Line
+	550  2300 550  2400
+Wire Wire Line
+	550  2400 550  2500
+Wire Wire Line
+	600  2500 650  2500
+Wire Wire Line
+	3850 2150 3850 2350
+Wire Wire Line
+	6100 5250 6100 5700
+Wire Wire Line
+	6000 5150 6000 5400
+Wire Wire Line
+	5900 4950 5900 5100
+Wire Wire Line
+	3650 5250 3800 5250
+Wire Wire Line
+	5900 2350 5900 3650
+$EndSCHEMATC
